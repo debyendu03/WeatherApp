@@ -7,22 +7,16 @@ searchButtonEl.addEventListener("click", async function () {
 
   const weather = await getWeather(apiUrl);
 
-  const locationEl = document.querySelector("#location");
-  const humidityEl = document.querySelector("#humidity");
-  const temparatureEl = document.querySelector("#temparature");
-  const windspeedEl = document.querySelector("#windSpeed");
-
-  locationEl.innerHTML = weather.city;
-  humidityEl.innerHTML = weather.humidity;
-  temparatureEl.innerHTML = weather.temparature;
-  windspeedEl.innerHTML = weather.windspeed;
+  document.querySelector("#location").innerHTML = weather.city;
+  document.querySelector("#humidity").innerHTML = weather.humidity;
+  document.querySelector("#temparature").innerHTML = weather.temparature;
+  document.querySelector("#windSpeed").innerHTML = weather.windspeed;
 });
 
 async function getWeather(apiUrl) {
   const response = await fetch(apiUrl);
   toastBox(response);
   const data = await response.json();
-  console.log(data);
   const weather = {
     city: data.location.name,
     humidity: data.current.humidity,
