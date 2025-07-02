@@ -3,6 +3,10 @@ const searchButtonEl = document.querySelector("#search-btn");
 
 searchButtonEl.addEventListener("click", async function () {
   const cityName = searchInputEl.value;
+  if (cityName == "") {
+    alert("Enter a location");
+    return;
+  }
   const apiUrl = `http://api.weatherapi.com/v1/current.json?key=1063c0095b1842faafa121400252405&q=${cityName}`;
 
   const weather = await getWeather(apiUrl);
