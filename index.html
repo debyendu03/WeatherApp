@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+    <title>WeatherApp</title>
+  </head>
+  <body>
+    <div class="toastBox"></div>
+    <div class="center_div">
+      <div id="search">
+        <input type="text" id="searchInput" />
+        <button id="search-btn">
+          <img src="/icons/search.svg" alt="search" id="searchButton" />
+        </button>
+      </div>
+      <h1 id="location">Location</h1>
+
+      <div class="wether-details">
+        <p>
+          <span>Humidity</span>
+          <span id="humidity">0</span>
+        </p>
+        <p><span>Temparature °c </span> <span id="temparature">0</span></p>
+        <p><span>Wind Speed</span> <span id="windSpeed">0</span></p>
+      </div>
+    </div>
+    <script src="/script.js"></script>
+  </body>
+</html>
