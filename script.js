@@ -15,6 +15,8 @@ searchButtonEl.addEventListener("click", async function () {
   document.querySelector("#humidity").innerHTML = weather.humidity;
   document.querySelector("#temparature").innerHTML = weather.temparature;
   document.querySelector("#windSpeed").innerHTML = weather.windspeed;
+
+  searchInputEl.value = "";
 });
 
 async function getWeather(apiUrl) {
