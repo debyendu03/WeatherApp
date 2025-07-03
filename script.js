@@ -1,7 +1,15 @@
 const searchInputEl = document.querySelector("#searchInput");
 const searchButtonEl = document.querySelector("#search-btn");
 
-searchButtonEl.addEventListener("click", async function () {
+searchInputEl.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") {
+    fetchWeatherData();
+  }
+});
+
+searchButtonEl.addEventListener("click", fetchWeatherData);
+
+async function fetchWeatherData() {
   const cityName = searchInputEl.value;
   if (cityName == "") {
     alert("Enter a location");
@@ -17,7 +25,8 @@ searchButtonEl.addEventListener("click", async function () {
   document.querySelector("#windSpeed").innerHTML = weather.windspeed;
 
   searchInputEl.value = "";
-});
+  searchInputEl.blur();
+}
 
 async function getWeather(apiUrl) {
   const response = await fetch(apiUrl);
