@@ -58,13 +58,13 @@ body {
   filter: invert(1);
 }
 
-.wether-details {
+.weather-details {
   display: flex;
   gap: 20px;
   justify-content: center;
   width: 100%;
 }
-.wether-details p {
+.weather-details p {
   background: #e0f7fa;
   border-radius: 16px;
   padding: 15px;
@@ -77,12 +77,12 @@ body {
   font-weight: 500;
   color: #222;
 }
-.wether-details span:first-child {
+.weather-details span:first-child {
   font-size: 0.92rem;
   color: #636e72;
   margin-bottom: 6px;
 }
-.wether-details span:last-child {
+.weather-details span:last-child {
   font-size: 1.18rem;
   color: #00b894;
   font-weight: 600;
